@@ -2,7 +2,8 @@ import sqlite3 from 'sqlite3';
 import { open, type Database } from 'sqlite';
 import { PlaceHolderImages } from './placeholder-images';
 
-let db: Database | null = null;
+// Use a global variable to hold the database connection, so it's not re-initialized on every request in serverless environments.
+let db: Database | undefined;
 
 const seedProducts = [
     { name: "Pro Laptop 15", unit: "pcs", category: "Electronics", brand: "TechCorp", stock: 50, imageUrl: PlaceHolderImages[0].imageUrl },
@@ -20,9 +21,11 @@ const seedProducts = [
 ];
 
 async function initializeDb() {
-    // Use in-memory database for production/deployment to avoid filesystem issues on serverless platforms
-    const isDevelopment = process.env.NODE_ENV === 'development';
-    const dbPath = isDevelopment ? './stockpilot.db' : ':memory:';
+    console.log("Initializing database...");
+    
+    // For Vercel/serverless, always use in-memory. For local dev, use a file.
+    const isProduction = process.env.NODE_ENV === 'production';
+    const dbPath = isProduction ? ':memory:' : './stockpilot.db';
 
     const newDb = await open({
         filename: dbPath,
@@ -71,23 +74,14 @@ async function initializeDb() {
         await stmt.finalize();
         console.log('Database seeded with initial products.');
     }
-    
+    console.log("Database initialized.");
     return newDb;
 }
 
 export async function getDb() {
-    if (process.env.NODE_ENV === 'development') {
-        if (!global._db) {
-            global._db = await initializeDb();
-        }
-        return global._db;
+    // In serverless environments, we need to use the global object to persist the database connection across function invocations.
+    if (!global._db) {
+        global._db = await initializeDb();
     }
-
-    // For production/deployment, always re-initialize the in-memory db.
-    // This is a short-term fix for serverless environments like Vercel.
-    // For a real production app, you'd use a managed database.
-    if (!db) {
-        db = await initializeDb();
-    }
-    return db;
+    return global._db;
 }
