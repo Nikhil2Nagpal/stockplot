@@ -13,8 +13,11 @@ export async function POST(request: Request) {
   
   try {
     let productsToInsert: Partial<Product>[] = [];
+    const contentType = request.headers.get('content-type') || '';
 
-    if (request.headers.get('content-type')?.includes('multipart/form-data')) {
+    if (contentType.includes('application/json')) {
+      productsToInsert = await request.json();
+    } else if (contentType.includes('multipart/form-data')) {
       const formData = await request.formData();
       const file = formData.get('file') as File;
       if (!file) {
@@ -24,7 +27,7 @@ export async function POST(request: Request) {
       const parsed = Papa.parse<CsvProduct>(csvText, { header: true, skipEmptyLines: true });
       productsToInsert = parsed.data;
     } else {
-      productsToInsert = await request.json();
+        productsToInsert = await request.json();
     }
     
     if (!productsToInsert || productsToInsert.length === 0) {
