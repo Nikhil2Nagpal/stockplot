@@ -1,3 +1,76 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "product-1",
+      "description": "A powerful laptop for professionals.",
+      "imageUrl": "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxsYXB0b3B8ZW58MHx8fHwxNzYzODMzMDU2fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "laptop"
+    },
+    {
+      "id": "product-2",
+      "description": "A high-resolution smartphone.",
+      "imageUrl": "https://images.unsplash.com/photo-1480694313141-fce5e697ee25?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8c21hcnRwaG9uZXxlbnwwfHx8fDE3NjM4ODQ4NzR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "smartphone"
+    },
+    {
+      "id": "product-3",
+      "description": "Comfortable wireless headphones.",
+      "imageUrl": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxoZWFkcGhvbmVzfGVufDB8fHx8MTc2Mzg3NTkzOHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "headphones"
+    },
+    {
+      "id": "product-4",
+      "description": "A sleek and modern coffee maker.",
+      "imageUrl": "https://images.unsplash.com/photo-1545936055-22b27770efca?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxjb2ZmZWUlMjBtYWtlcnxlbnwwfHx8fDE3NjM4ODc5NTN8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "coffee maker"
+    },
+    {
+      "id": "product-5",
+      "description": "A stylish and durable backpack.",
+      "imageUrl": "https://images.unsplash.com/photo-1622560480654-d96214fdc887?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxiYWNrcGFja3xlbnwwfHx8fDE3NjM4NDc0Nzl8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "backpack"
+    },
+    {
+      "id": "product-6",
+      "description": "A professional-grade DSLR camera.",
+      "imageUrl": "https://images.unsplash.com/photo-1512790182412-b19e6d62bc39?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8Y2FtZXJhfGVufDB8fHx8MTc2Mzg1ODA4MHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "camera"
+    },
+    {
+      "id": "product-7",
+      "description": "A smart watch with fitness tracking.",
+      "imageUrl": "https://images.unsplash.com/photo-1508685096489-7aacd43bd3b1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxzbWFydHdhdGNofGVufDB8fHx8MTc2MzkxNzAxOXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "smartwatch"
+    },
+    {
+      "id": "product-8",
+      "description": "An electric kettle for quick boiling.",
+      "imageUrl": "https://images.unsplash.com/photo-1738520420636-a1591b84723e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxlbGVjdHJpYyUyMGtldHRsZXxlbnwwfHx8fDE3NjM4ODEyNTN8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "electric kettle"
+    },
+    {
+      "id": "product-9",
+      "description": "An ergonomic office chair.",
+      "imageUrl": "https://images.unsplash.com/photo-1633789638578-eef0da1dc063?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxvZmZpY2UlMjBjaGFpcnxlbnwwfHx8fDE3NjM4ODE2OTV8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "office chair"
+    },
+    {
+      "id": "product-10",
+      "description": "A portable bluetooth speaker.",
+      "imageUrl": "https://images.unsplash.com/photo-1589001181560-a8df1800e501?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxibHVldG9vdGglMjBzcGVha2VyfGVufDB8fHx8MTc2MzgzNzkyMnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "bluetooth speaker"
+    },
+    {
+      "id": "product-11",
+      "description": "A gaming mouse with RGB lighting.",
+      "imageUrl": "https://images.unsplash.com/photo-1605773527852-c546a8584ea3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxnYW1pbmclMjBtb3VzZXxlbnwwfHx8fDE3NjM4NzYyODJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "gaming mouse"
+    },
+    {
+      "id": "product-12",
+      "description": "A mechanical keyboard for typing enthusiasts.",
+      "imageUrl": "https://images.unsplash.com/photo-1626958390898-162d3577f293?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxtZWNoYW5pY2FsJTIwa2V5Ym9hcmR8ZW58MHx8fHwxNzYzODc0NTc5fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "mechanical keyboard"
+    }
+  ]
 }
