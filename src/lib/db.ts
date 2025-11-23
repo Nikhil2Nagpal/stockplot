@@ -20,8 +20,12 @@ const seedProducts = [
 ];
 
 async function initializeDb() {
+    // Use in-memory database for production/deployment to avoid filesystem issues on serverless platforms
+    const isDevelopment = process.env.NODE_ENV === 'development';
+    const dbPath = isDevelopment ? './stockpilot.db' : ':memory:';
+
     const newDb = await open({
-        filename: './stockpilot.db',
+        filename: dbPath,
         driver: sqlite3.Database,
     });
     
@@ -79,6 +83,9 @@ export async function getDb() {
         return global._db;
     }
 
+    // For production/deployment, always re-initialize the in-memory db.
+    // This is a short-term fix for serverless environments like Vercel.
+    // For a real production app, you'd use a managed database.
     if (!db) {
         db = await initializeDb();
     }
